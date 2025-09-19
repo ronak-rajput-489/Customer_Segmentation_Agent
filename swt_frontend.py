@@ -438,7 +438,8 @@ st.markdown(
 
 # --------------------- Side Bar Section -------------------------
 st.sidebar.title(f"Welcome, Robert Parker!")
-authenticator.logout("Logout",'sidebar')
+if st.sidebar.button("Logout"):
+        st.sidebar.write("You clicked the logout button!")
 # Sidebar — conversations + dictionary button
 with st.sidebar:
     # st.markdown("#### CHAT HISTORY")
@@ -654,4 +655,5 @@ st.markdown("""
     """, unsafe_allow_html=True)        
 
             
+
 
